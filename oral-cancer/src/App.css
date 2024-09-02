@@ -1,0 +1,370 @@
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 1.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: left;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  padding-left: 12%;
+  /* Fx 5+ */
+}
+
+
+/* Google fonts - Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* colors */
+@font-face {
+    font-family: 'Chantelli_Antiqua-webfont.woff';
+    src:url('./fonts/Chantelli_Antiqua-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* body */
+.body {
+  background:rgba(0,0,0,0.9);
+  
+}
+
+/* links */
+.nfl a, .mlb a, .nhl a, .pga a {text-decoration:none;transition: color 0.2s ease-out;}
+.nfl a {color:rgba(79,192,210,1);}
+.nfl a:hover {color:darken(rgba(79,192,210,1), 20%);}
+.mlb a {color:rgba(82,210,154,1);}
+.mlb a:hover {color:darken(rgba(82,210,154,1), 20%);}
+.nhl a {color:rgba(231,196,104,0.7);}
+.nhl a:hover {color:darken(rgba(231,196,104,0.7), 20%);}
+.pga a {color:rgba(235,118,85,1);}
+.pga a:hover {color:darken(rgba(235,118,85,1), 20%);}
+
+/* wrapper */
+.wrapper {
+    width:100%;
+    max-width:1000px;
+    margin:20px auto 100px auto;
+    padding:0;
+    background:rgba(255,255,255,0.1);
+    /* color:rgba(255,255,255,0.9); */
+    color: black;
+    font-size: 30px;
+    font-family: 'Chantelli_Antiqua-webfont.woff', helvetica, sans-serif;
+  overflow:hidden;
+  position:relative;
+}
+
+/* lists */
+.row ul {
+  margin:0;
+  padding:0;
+}
+.row ul li  {
+  margin:0;
+  font-size:16px;
+  font-weight:normal;
+  list-style:none;
+  display:inline-block;
+  width:20%;
+	box-sizing:border-box;
+  @media only screen and (max-width:767px) and (min-width:480px) {
+    font-size:13px;
+  }
+  @media only screen and (max-width:479px) {
+    font-size:13px;
+  }
+}
+
+.title ul li {
+  padding:15px 13px;
+}
+.row ul li {
+  padding:5px 10px;
+}
+
+/* rows */
+.row {
+  padding:20px 0;
+  height:30px;
+  font-size:0;
+  position:relative;
+  overflow:hidden;
+  transition:all 0.2s ease-out;
+  border-top:1px solid darken(rgba(255,255,255,0.1), 100%);
+}
+.row:hover {
+  background-color:lighten(rgba(0,0,0,0.9), 10%);
+  height:65px;
+  @media only screen and (max-width : 767px) {
+    height:85px;
+  }
+  @media only screen and (max-width : 359px) {
+    height:105px;
+  }
+}
+.title {
+  padding:25px 0 5px 0;
+  height:45px;
+  font-size:0;
+  background-color:rgba(255,255,255,0.1);
+  border-left:3px solid lighten(rgba(255,255,255,0.1), 100%);
+}
+.title:hover {
+  height:45px;
+  background-color:rgba(255,255,255,0.1);
+  border-left:3px solid lighten(rgba(255,255,255,0.1), 100%);
+}
+
+.title-hide {
+  @media only screen and (max-width:767px) {
+    display:none;
+  }
+}
+
+.nfl {border-left:3px solid darken(rgba(79,192,210,1), 30%);}
+.nfl:hover {border-left:3px solid rgba(79,192,210,1);}
+.mlb {border-left:3px solid darken(rgba(82,210,154,1), 30%);}
+.mlb:hover {border-left:3px solid rgba(82,210,154,1);}
+.nhl {border-left:3px solid darken(rgba(231,196,104,0.7), 30%)}
+.nhl:hover {border-left:3px solid rgba(231,196,104,0.7);}
+.pga {border-left:3px solid darken(rgba(235,118,85,1), 30%);}
+.pga:hover {border-left:3px solid rgba(235,118,85,1);}
+
+/* row one - fadeIn */
+.row-fadeIn-wrapper {
+  opacity:0;
+  font-size:0;
+  height:0;
+  overflow:hidden;
+  position:relative;
+  transition:all 0.2s ease-out;
+  animation:fadeIn 0.4s ease-out 2s 1 alternate;
+  animation-fill-mode:forwards;
+}
+.row-fadeIn-wrapper:hover {
+  height:35px;
+  @media only screen and (max-width : 767px) {
+    height:55px;
+  }
+  @media only screen and (max-width : 359px) {
+    height:75px;
+  }
+}
+
+.fadeIn {
+  padding:20px 0;
+  font-size:0;
+  position:absolute;
+  transition:all 0.2s ease-out;
+  width:100%;
+}
+.fadeIn:hover {
+  background-color:lighten(rgba(0,0,0,0.9), 10%);
+}
+
+/* row two - fadeOut */
+.row-fadeOut-wrapper {
+  font-size:0;
+  overflow:hidden;
+  position:relative;
+  transition:all 0.2s ease-out;
+  animation:fadeOut 0.4s ease-out 8s 1 alternate;
+  animation-fill-mode:forwards;
+  opacity:1;
+  height:65px;
+}
+.row-fadeOut-wrapper:hover {
+  height:100px;
+}
+
+/* update content */
+.update-row {
+  animation:update 0.5s ease-out 12s 1 alternate;
+}
+.update1 {
+  position:absolute;
+  top:25px;
+  display:inline-block;
+  opacity:1;
+  animation:update1 1s ease-out 12s 1 alternate;
+  animation-fill-mode:forwards;
+}
+.update2 {
+  position:absolute;
+  top:25px;
+  display:inline-block;
+  opacity:0;
+  animation:update2 4s ease-out 13s 1 alternate;
+  animation-fill-mode:forwards;
+}
+
+/* more content */
+ul.more-content li {
+  position:relative;
+  top:22px;
+  font-size:13px;
+  margin:0;
+  padding:10px 13px;
+  display:block;
+  height:50px;
+  width:100%;
+  color:darken(rgba(255,255,255,0.9),50%);
+  @media only screen and (max-width:767px) {
+    font-size:11px;
+  }
+}
+
+/* small content */
+.small {
+  color:darken(rgba(255,255,255,0.9),60%);
+  font-size:10px;
+  padding:0 10px;
+  margin:0;
+  @media only screen and (max-width:767px) {
+    display:none;
+  }
+}
+
+/* keyframe animations */
+@keyframes fadeIn {
+  from {background:rgba(255,255,255,0.1);opacity:0;padding:0;}
+  to {background:darken(rgba(255,255,255,0.1),80%);opacity:1;padding:0 0 65px 0;}
+}
+@keyframes fadeOut {
+  from {background:darken(rgba(255,255,255,0.1),80%);opacity:1;height:65px;}
+  to {background:rgba(255,255,255,0.1);opacity:0;height:0;}
+}
+@keyframes update {
+  0% {background:darken(rgba(255,255,255,0.1),80%);}
+  50% {background:rgba(255,255,255,0.1);}
+  100% {background:darken(rgba(255,255,255,0.1),80%);}
+}
+@keyframes update1 {
+  0% {opacity:0;}
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+@keyframes update2 {
+  0% {opacity:0;color:rgba(255,255,255,0.9);}
+  20% {opacity:1;color:rgba(82,210,154,1);}
+  100% {opacity:1;color:rgba(255,255,255,0.9);}
+}
+
+
+
+img {
+  max-width: 750px;
+  max-height: 750px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(128, 128, 128, 0.3); /* Grey shadow effect */
+  padding: 10px;
+}
+.predict {
+  align-items: center;
+  align-self: center;
+  font-size: 15px;
+  font-family: 'Chantelli_Antiqua-webfont.woff', helvetica, sans-serif;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  /* background: linear-gradient(to right, green, lightgreen, green); */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.predict:hover {
+  background-color: #ff0000; /* Red color on hover */
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1200% 1;
+  }
+}
+
+/* Add this to your CSS stylesheet */
+.translucent-paragraph {
+  background-color: rgba(144, 238, 144, 0.5); /* slight green color with 50% opacity */
+  padding: 10px;
+  font-size: 25px;
+  width: 700px;
+  border-radius: 5px;
+  text-align: center;
+  align-self: center;
+}
+.translucent-grey-paragraph {
+  background-color: rgba(169, 169, 169, 0.5); /* Grey color with 50% opacity */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.para{
+  font-size: 20px;
+  /* align it to left */
+  text-align: left;
+}
+.small_para{
+ font-size: 15px;
+ text-align: left;
+}
+
